@@ -142,7 +142,7 @@ button
 .left_nav
 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
-    padding: 1rem; 
+    padding: 1.2rem 1rem; 
     width: 27rem;
     position: absolute;
     top: 0%;
@@ -161,6 +161,7 @@ button
     justify-content: center;
     align-items: center;
     gap: .5rem;
+    margin-top: 0 !important;
 }
 
 .left_nav .buttons button 
@@ -246,8 +247,137 @@ button
     place-items: center;
     padding: .8rem;
     display: none;
-    /*position: fixed;*/
+    position: fixed;
+    z-index: 100;
+    cursor: pointer;
 }
+
+.message-container
+{
+    width: 34rem;
+    max-width: 34rem;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+    right: -100%;
+    transition: all .5s;
+}
+
+.message-container.active
+{
+    right: 0%;
+}
+
+.message-box
+{
+    height: 93%;
+    padding: .3rem;
+    box-sizing: border-box;
+}
+
+.send-box
+{
+    position: absolute;
+    bottom: .5%;
+    width: 100%;
+    display: flex;
+    height: 6.5%;
+}
+
+.send-box input
+{
+    width: 80%;
+    padding: 1rem .5rem;
+    outline: none;
+    border: .1rem solid #c1b5f7a9;
+    border-radius: .8rem;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    font-size: 1.5rem;
+}
+
+.send-box button
+{
+    width: 18%;
+    padding: 1rem .5rem;
+    border-radius: .8rem;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border: none;
+    background-color: #c1b5f7a9;
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+    transition: all .3s;
+}
+
+.send-box button:hover
+{
+    background-color: #c1b5f7d8;
+}
+
+.message
+{
+    padding: 1vmax;
+    margin: 1vmax;
+    border-radius: 0.5vmax;
+    display: inline-block;
+    clear: both;
+    font-size: 1.2vmax;
+    font-family: 'Roboto';
+}
+
+.right
+{
+    float: right;
+    background-color: crimson;
+    color: white;
+    text-align: center;
+}
+
+.left
+{
+    float: left;
+    text-align: left;
+    background-color: rgb(196, 255, 184);
+}
+
+.unseen
+{
+    position: relative;
+}
+
+.unseen span
+{
+    position: absolute;
+    top: -5%;
+    right: -5%;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: crimson;
+    padding: .1rem;
+    color: #000;
+    display: grid;
+    place-items: center;
+}
+
+.typing
+{
+    margin: 1vmax;
+    clear: both;
+    font-size: 1.6rem;
+    float: left;
+    text-align: left;
+    color: lightgreen;
+}
+
+
+
+
                                             /* responsive code  */
 
 @media (max-width: 1080px)
